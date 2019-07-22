@@ -1,0 +1,13 @@
+" Denis Florjancic 2019-07-18
+
+set number relativenumber " Set Hybrid line numbers
+syntax on "Syntax highlighting
+
+" Toggle between realtive and absolute numbers
+:augroup numbertoggle
+: autocmd!
+: autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+: autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+:augroup END 
+
+
