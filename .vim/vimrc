@@ -1,7 +1,36 @@
 " Denis Florjancic 2019-07-18
+set nocompatible
+filetype off	
+
+set encoding=utf-8
+syntax on "Syntax highlighting
+let mapleader=","
+set wildmenu
+
+nnoremap <leader>d dd
+
+""" VUNDLE, PLUGINS SECTION
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" NERDTree and plugin for git status flags 
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+
+""" SETTING NUMBER SETTINGS
 
 set number relativenumber " Set Hybrid line numbers
-syntax on "Syntax highlighting
 
 " Toggle between realtive and absolute numbers
 :augroup numbertoggle
