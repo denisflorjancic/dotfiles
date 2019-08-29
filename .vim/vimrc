@@ -8,6 +8,7 @@ let mapleader=","
 set wildmenu
 
 nnoremap <leader>d dd
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 """ VUNDLE, PLUGINS SECTION
 
@@ -39,4 +40,9 @@ set number relativenumber " Set Hybrid line numbers
 : autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
 :augroup END 
 
+""" INDENTATION RULES
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
 
